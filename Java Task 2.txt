@@ -1,0 +1,305 @@
+1) Write a program to check whether a given string is a palindrome or not using for loop and if-else statement.
+
+Program:
+
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the string:");
+String s=sc.nextLine();
+String reverse="";
+for(int i=s.length()-1; i>=0; i--){
+reverse=reverse+s.charAt(i);
+}
+if(s.equals(reverse)){
+System.out.println("The given string is Palindrome");
+}
+else{
+System.out.println("The given string is not Palindrome");
+}
+}
+}
+
+Output:
+Enter the string:Madam
+The given string is not Palindrome
+
+Enter the string:MadaM
+The given string is Palindrome
+
+
+2) Write a program that reads in a string from the user and uses a loop to reverse the order of the string. Then, output the reversed string.,
+
+Program:
+
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the string:");
+String s=sc.nextLine();
+String reverse=" ";
+for(int i=s.length()-1; i>=0; i--){
+    reverse=reverse+s.charAt(i);
+}
+System.out.print("The reversed String is: " + reverse);
+}
+}
+
+Output:
+
+Enter the String: Laddu
+The reversed String is: uddaL
+
+
+3) Write a program to print the given below pattern.
+Sample input: 
+4
+Sample output:
+1
+2 3
+4 5 6
+7 8 9 10
+
+Program:
+
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the number of rows to be printed: ");
+int n=sc.nextInt();
+int num=1;
+for(int i=1; i<=n; i++)
+{
+for(int j=1;j<=i;j++){
+System.out.print(num + " ");
+num++;
+}
+System.out.println();
+}
+}
+}
+
+Output:
+
+Enter the number of rows to be printed: 4
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+
+4) Write a program to print the given below pattern.
+Sample input:
+5
+Sample output:
+*   *
+ * *
+  *
+ * *
+*   *
+Program:
+
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+System.out.print("Enter the number to print the number of stars: ");
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int k = n*2-1;	
+for (int i=1; i<= k; i++) 
+{
+for (int j=1; j<= k; j++) 
+{
+if(j==i || j==k-i+1) 
+{
+System.out.print("*");
+}
+System.out.print(" ");
+}
+System.out.println();
+}
+}
+}
+
+Output:
+
+Enter the number to print the number of stars: 3
+*    * 
+ *  *  
+  *   
+ *  *  
+*    * 
+
+
+
+5) Anna university Grading system the newly appointed vice-chancellot of anna university wanted to create an automated grading system for the students to check their grade. When a students enters a marke, the grading system displays the correpsonding grade. Write a program to solve the given problem. The grades for marks 100-S, 90-99 is A, 80-89 is B, 70-79 is C, 60-69 is D, 50-59 is E and less than 50 is F.
+Input format:
+The input consists of one integer which corresponds to the marks scored by the student.
+
+output format:
+If a student markes greater than 100, print "Invalid Input". Otherwise, print the grade
+
+Sample input:
+78
+sample Output:
+C
+
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Grade S for 100 Marks");
+System.out.println("Grade A for 90-99 Marks");
+System.out.println("Grade B for 80-89 Marks");
+System.out.println("Grade C for 70-79 Marks");
+System.out.println("Grade D for 60-69 Marks");
+System.out.println("Grade E for 50-59 Marks");
+System.out.println("Grade F for less than Marks");
+System.out.print("Enter the marks Scored: ");
+int mark=sc.nextInt();
+if(mark<50){
+System.out.println("Your grade is F");
+}else if(mark>=50 && mark<60){
+System.out.println("Your grade is E");
+}else if(mark>=60 && mark<70){
+System.out.println("Your grade is D");
+}else if(mark>=70 && mark<80){
+System.out.println("Your grade is C");
+}else if(mark>=80 && mark<90){
+System.out.println("Your grade is B");
+}else if(mark>=90 && mark<99){
+System.out.println("Your grade is A");
+}else if(mark==100){
+System.out.println("Your grade is S");
+}else if(mark>100){
+System.out.println("INVALID");
+}
+}
+}
+
+Output:
+Grade S for 100 Marks
+Grade A for 90-99 Marks
+Grade B for 80-89 Marks
+Grade C for 70-79 Marks
+Grade D for 60-69 Marks
+Grade E for 50-59 Marks
+Grade F for less than Marks
+Enter the marks Scored: 65
+Your grade is D
+
+6) Write a program to calculate the hotel tariff. the room rent is 20% high duing peak seasons [April-June, November-December]
+Note: Use the Switch construct.
+
+Input format:
+the first input containing an integer which denotes the number of the month.
+The second input containing the floating point number which denotes the room rent per day
+the third input containing an integer which denotes the number of days stayed in the hotel.
+
+Output format:
+Print the hotel tariff to be paid in floating pount with 2 decimal places
+
+Sample input:
+3
+1500
+2
+
+Sample output:
+3000.00
+
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+double peaktime=0;
+double price=0;
+System.out.println("Enter the Month Number: ");
+Scanner m=new Scanner(System.in);
+int month=m.nextInt();
+System.out.println("Enter the rent: ");
+Scanner r=new Scanner(System.in);
+float rent=r.nextFloat();
+System.out.println("Enter the Number of days stayed:");
+Scanner d=new Scanner(System.in);
+int days=d.nextInt();
+price=rent*days;
+peaktime=((price+(price*0.2))*days);
+switch(month)
+{
+case 1:
+System.out.println(price);
+break;
+case 2:
+System.out.println(price);
+break;
+case 3:
+System.out.println(price);
+break;
+case 4:
+System.out.println(peaktime);
+break;
+case 5:
+System.out.println(peaktime);
+break;
+case 6:
+System.out.println(peaktime);
+break;
+case 7:
+System.out.println(price);
+break;
+case 8:
+System.out.println(price);
+break;
+case 9:
+System.out.println(price);
+break;
+case 10:
+System.out.println(price);
+break;
+case 11:
+System.out.println(peaktime);
+break;
+case 12:
+System.out.println(peaktime);
+break;
+default:
+System.out.println("Invalid");
+break;
+}
+}
+}
+
+
+
+7) Write a program to calculate the largest number among three numbers.
+
+Program:
+import java.util.Scanner;  
+public class Main{
+public static void main(String args[]){   
+int a, b, c, largest, temp;    
+Scanner sc = new Scanner(System.in);  
+System.out.println("Enter the first number:");  
+a = sc.nextInt();  
+System.out.println("Enter the second number:");  
+b = sc.nextInt();  
+System.out.println("Enter the third number:");  
+c = sc.nextInt();  
+temp=a>b?a:b;    
+largest=c>temp?c:temp; 
+System.out.println("The largest number is: "+largest);  
+}  
+}  
+
+Output:
+
+Enter the first number:
+8
+Enter the second number:
+4
+Enter the third number:
+6
+The largest number is: 8
