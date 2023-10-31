@@ -1,0 +1,212 @@
+1)Write a Java program that declares four integer variables a,b,c and d. Then, write an if statement that checks whether the sum of a and b is greater than the sum of c and d. If the condition is true, the program should output a message indicating that the sum of a and b is greater than the sum of c and d.
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the value of a:");
+int a=sc.nextInt();
+System.out.println("Enter the value of b:");
+int b=sc.nextInt();
+System.out.println("Enter the value of c:");
+int c=sc.nextInt();
+System.out.println("Enter the value of d:");
+int d=sc.nextInt();
+int sum1=a+b;
+int sum2=c+d;
+if(sum1>sum2)
+{
+System.out.println("Sum of a and b is greater than sum of c and d");
+}
+if(sum1<sum2)
+{
+System.out.println("Sum of c and d is greater than sum of a and b");
+}
+}
+}
+output:
+Enter the value of a:
+1
+Enter the value of b:
+4
+Enter the value of c:
+8
+Enter the value of d:
+2
+Sum of c and d is greater than sum of a and b.
+
+
+
+2) Have a variable store an integer. Create an if statement to find out if it's an even number:
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the number:");
+int num=sc.nextInt();
+if(num%2==0){
+System.out.println("Number is Even");
+}else{
+System.out.println("Number is Odd");
+}
+}
+}
+
+Output:
+Enter the number:
+578
+Number is Even
+
+3) Write a program to print the characters from A to Z.
+
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+char ch;
+for(ch='A'; ch<='Z'; ch++){
+System.out.print(ch +" ");
+}
+}
+}
+
+Output:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+4) Write a java program to get 2 numbers from the user and swap their values without any loss of data. You can make use of additional variable for swapping. Print the corresponding swapped values of the two numbers a output in the console.
+
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the value of a:");
+int a=sc.nextInt();
+System.out.println("Enter the value of b:");
+int b=sc.nextInt();
+int c= a;
+a= b;
+b= c;
+System.out.println("Swapped value of a is " +a);
+System.out.println("Swapped value of b is " +b);
+}
+}
+
+Output:
+Enter the value of a:
+45
+Enter the value of b:
+67
+Swapped value of a is 67
+Swapped value of b is 45
+
+5)Write a program to check if a number is prime or not.
+
+6)Write a program to print the factorial of the given number:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the number to find the factorial: ");
+int a=sc.nextInt();
+int fact=1;
+for(int i=1; i<=a; i++){
+fact=fact*i;
+}
+System.out.println("factorial of "+a+" is "+fact);
+}
+}
+
+output:
+Enter the number to find the factorial: 8
+factorial of 8 is 40320
+
+7) Write a program to print the length of the given string.
+String msg:"Guvi Geek"
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the string to find the length :");
+String s=sc.nextLine();
+System.out.println("String length is: "+s.length());
+}
+}
+
+Output:
+Enter the string to find the length :guvi geek
+String length is: 9
+
+
+8) Write a program to pront "Welcome to Guvi" 10 times.
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the string to print :");
+String s=sc.nextLine();
+for(int i=0;i<10;i++){
+System.out.println(s);
+}
+}
+}
+
+Output:
+Enter the string to print :Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+Welcome to guvi
+
+
+9)Write a program to check whether the person ois senior citizen or not.
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the age :");
+int a=sc.nextInt();
+if(a>=60)
+{
+System.out.println("This person is a Senior citizen");
+}else{
+System.out.println("This person is not a Senior citizen");
+}
+}
+}
+ 
+Output:
+Enter the age :72
+This person is a Senior citizen
+
+10) Write a program to count number of digits in an integer.
+Program:
+import java.util.Scanner;
+public class Main{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the Integer to find the Number of digits:");
+int a= sc.nextInt();
+int count = 0;
+while (a != 0) {
+a=a/ 10;
+++count;
+}
+System.out.println("Number of digits: " + count);
+}
+}
+
+Output:
+Enter the Integer to find the Number of digits:678543
+Number of digits: 6
+
